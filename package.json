@@ -1,0 +1,34 @@
+{
+  "name": "crud-mongo_nodejs",
+  "version": "1.0.0",
+  "description": "crud nomgoose nodejs express ejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo1470/CRUD-mongo_nodejs.git"
+  },
+  "author": "Ricardo Camayo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo1470/CRUD-mongo_nodejs/issues"
+  },
+  "homepage": "https://github.com/ricardo1470/CRUD-mongo_nodejs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.2",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.13",
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

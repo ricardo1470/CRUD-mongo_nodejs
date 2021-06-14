@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head -->
+    <%- include('partials/head.html') %>
+<body>
+    <!-- navigation -->
+    <%- include('partials/nav.html') %>
+
+    <div class="container">
+        <div class="row">
+            <!-- form -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="title" placeholder="insert a title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" id="" cols="80" class="form-control" placeholder="insert description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary btn-block">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- list -->
+            <div class="col-md-9">
+                <table class="table table-bordered table-hober">
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Operation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(tasks) {%>
+                            <% for(var i = 0 ; i < tasks.length ; i++) { %>
+                                <tr>
+                                    <td><%= i + 1 %></td>
+                                    <td><%= tasks[i].title %></td>
+                                    <td><%= tasks[i].description %></td>
+                                    <td>
+                                        <a href="/done/<%= tasks[i]._id %>" class="btn btn-sm <%= tasks[i].status ? 'btn-success' : 'btn-outline-success' %>">Done</a>
+                                        <a href="/edit/<%= tasks[i]._id %>" class="btn  btn-outline-info btn-sm">Edit</a>
+                                        <a href="/delete/<%= tasks[i]._id %>" class="btn btn-outline-danger btn-sm">Delete</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
