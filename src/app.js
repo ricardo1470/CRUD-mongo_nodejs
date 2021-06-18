@@ -52,7 +52,14 @@ app.use(function(err, req, res, next) {
     res.render('error.html');
 });
 
-/* listen server on port */
+// listen server on port
 app.listen(port, function () {
     console.log(`CORS-enabled, web server listening on port: ${port}`)
 });
+
+// process terminated
+process.on('SIGTERM', () => {
+  server.close(() => {
+    console.log('Process terminated')
+  })
+})
