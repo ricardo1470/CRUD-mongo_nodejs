@@ -11,7 +11,12 @@ const app = express();
 const port = 9000 || process.env.PORT;
 
 // connection to db
-mongoose.connect('mongodb://localhost/crud')
+mongoose.connect('mongodb://localhost/crud', {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true
+})
 
 var db = mongoose.connection
 
