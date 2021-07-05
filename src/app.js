@@ -13,6 +13,7 @@ const port = 9000 || process.env.PORT;
 // connection to db
 mongoose.connect('mongodb://localhost/crud')
     .then(db => console.log('db connected'))
+    .then(db => db)
     .catch(err => console.log(err));
 
 // importing routes
