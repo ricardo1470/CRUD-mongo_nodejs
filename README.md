@@ -1,9 +1,7 @@
 > # CRUD-mongo_nodejs
 ---
 
-[Project](https://www.code-inspector.com/project/24530/score/svg)
-
-[Quality](https://www.code-inspector.com/project/24530/status/svg)
+![Project](https://www.code-inspector.com/project/24530/score/svg) ![Quality](https://www.code-inspector.com/project/24530/status/svg)
 ---
 <a href="personal logo"><img src="https://github.com/ricardo1470/ricardo1470/blob/master/img/Backend.png" align="middle" width="1000" height="600"></a>
 ---
