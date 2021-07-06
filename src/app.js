@@ -22,11 +22,11 @@ var db = mongoose.connection
 
 db.on('error', function(err){
   console.log('connection error', err)
-})
+});
 
 db.once('open', function(){
   console.log('Connection to DB successful')
-})
+});
 
 // importing routes
 const indexRoutes = require('./routes/index');
